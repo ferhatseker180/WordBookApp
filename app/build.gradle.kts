@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.ferhatt.wordapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.ferhatt.wordapp"
@@ -41,6 +41,8 @@ android {
         viewBinding = true
     }
 
+
+
 }
 
 dependencies {
@@ -53,10 +55,11 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    implementation ("com.google.dagger:hilt-android:2.48")
+    implementation ("com.google.dagger:hilt-android:2.48.1")
     ksp ("com.google.dagger:hilt-android-compiler:2.48")
-    //implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-    ksp ("androidx.hilt:hilt-compiler:1.0.0")
+
+    // ksp ("androidx.hilt:hilt-compiler:1.0.0")
+
 
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.2")
     implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.2")

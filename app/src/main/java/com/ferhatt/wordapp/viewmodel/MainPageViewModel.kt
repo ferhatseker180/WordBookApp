@@ -29,7 +29,6 @@ class MainPageViewModel @Inject constructor(
     val selectedUrl : LiveData<String>
         get() = selectedImage
 
-    // Art Detail Fragment İçin Kullanılacak Model
     private var insertWordMsg = MutableLiveData<Resource<Word>>()
     val insertArtMessage : LiveData<Resource<Word>>
         get() = insertWordMsg

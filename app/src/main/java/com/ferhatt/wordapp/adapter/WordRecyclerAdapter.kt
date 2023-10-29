@@ -55,8 +55,8 @@ class WordRecyclerAdapter @Inject constructor(val glide: RequestManager) : Recyc
 
         val word = words[position]
         holder.itemView.apply {
-            nameText.text = "Name : ${word.wordName}"
-            artistNameText.text = "Artist Name : ${word.wordDescription}"
+            nameText.text = "${word.wordName}"
+            artistNameText.text = "${word.wordDescription}"
             glide.load(word.imageUrl).into(imageView)
 
         }
