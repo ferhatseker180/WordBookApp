@@ -24,7 +24,7 @@
             android:id="@+id/wordRowText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Art Name"
+            android:text="Word"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="5dp"
             android:textSize="28sp" />
@@ -33,7 +33,7 @@
             android:id="@+id/wordRowDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Artist Name"
+            android:text="Word Description"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="4dp"
             android:textSize="20sp" />

@@ -3,14 +3,21 @@ package com.ferhatt.wordapp.view
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.ferhatt.wordapp.R
+import com.ferhatt.wordapp.adapter.WordRecyclerAdapter
 import com.ferhatt.wordapp.databinding.FragmentMainPageBinding
 import com.ferhatt.wordapp.viewmodel.MainPageViewModel
+import javax.inject.Inject
 
 
-class MainPageFragment : Fragment(R.layout.fragment_main_page) {
+class MainPageFragment @Inject constructor(
+    val wordRecyclerAdapter: WordRecyclerAdapter
+) : Fragment(R.layout.fragment_main_page) {
 
     private var mainPageBinding : FragmentMainPageBinding ?= null
     lateinit var mainViewModel : MainPageViewModel
@@ -26,7 +33,8 @@ class MainPageFragment : Fragment(R.layout.fragment_main_page) {
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
            val layoutPosition = viewHolder.layoutPosition
-          //  val selectedArt =
+            val selectedWord = wordRecyclerAdapter.words[layoutPosition]
+            mainViewModel.deleteWord(selectedWord)
         }
 
     }
@@ -38,6 +46,22 @@ class MainPageFragment : Fragment(R.layout.fragment_main_page) {
         val tasarim = FragmentMainPageBinding.bind(view)
         mainPageBinding = tasarim
 
+        subscribeToObservers()
+        tasarim.recyclerViewMain.adapter = wordRecyclerAdapter
+        tasarim.recyclerViewMain.layoutManager = LinearLayoutManager(requireContext())
+
+        ItemTouchHelper(swipeCallBack).attachToRecyclerView(tasarim.recyclerViewMain)
+
+        tasarim.fab.setOnClickListener {
+            findNavController().navigate(MainPageFragmentDirections.actionMainPageFragmentToWordDetailsFragment())
+        }
+
+    }
+
+    private fun subscribeToObservers(){
+        mainViewModel.wordList.observe(viewLifecycleOwner, Observer {
+            wordRecyclerAdapter.words = it
+        })
     }
 
 }
