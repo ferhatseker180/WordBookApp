@@ -4,17 +4,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.ferhatt.wordapp.roomdb.Word
 
 class WordRecyclerAdapter : RecyclerView.Adapter<WordRecyclerAdapter.WordViewHolder>() {
 
     class WordViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
-    private val diffUtil = object : DiffUtil.ItemCallback<Art>() {
-        override fun areItemsTheSame(oldItem: Art, newItem: Art): Boolean {
+    private val diffUtil = object : DiffUtil.ItemCallback<Word>() {
+        override fun areItemsTheSame(oldItem: Word, newItem: Word): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: Art, newItem: Art): Boolean {
+        override fun areContentsTheSame(oldItem: Word, newItem: Word): Boolean {
             return oldItem == newItem
         }
 
