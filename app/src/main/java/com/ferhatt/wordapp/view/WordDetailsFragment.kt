@@ -81,5 +81,11 @@ class WordDetailsFragment @Inject constructor(
         })
     }
 
+    override fun onDestroyView() {
+        super.onDestroyView()
+        detailBinding = null
+
+    }
+
 
 }

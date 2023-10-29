@@ -87,4 +87,9 @@ class ImageApiFragment@Inject constructor(
         })
     }
 
+    override fun onDestroyView() {
+        tasarim = null
+        super.onDestroyView()
+    }
+
 }

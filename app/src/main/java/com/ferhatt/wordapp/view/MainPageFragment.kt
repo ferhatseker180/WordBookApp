@@ -68,4 +68,9 @@ class MainPageFragment @Inject constructor(
         })
     }
 
+    override fun onDestroyView() {
+        mainPageBinding = null
+        super.onDestroyView()
+    }
+
 }
