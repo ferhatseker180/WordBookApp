@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/wordRowImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
         android:src="@drawable/image"
         android:scaleType="centerCrop">
 
@@ -24,18 +24,21 @@
             android:id="@+id/wordRowText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Word"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="5dp"
+            android:layout_marginHorizontal="90dp"
+            android:fontFamily="@font/chango"
+            android:text="Word"
             android:textSize="28sp" />
 
         <TextView
             android:id="@+id/wordRowDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Word Description"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="4dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Word Description"
             android:textSize="20sp" />
 
 
