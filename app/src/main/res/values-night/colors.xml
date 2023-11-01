@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="mainPageTextColor">#FFFFFFFF</color>
+
+    <color name="detailBackgroundColor">#FF000000</color>
+    <color name="detailHintColor">#FFFFFFFF</color>
+    <color name="detailButtonTextColor">#FFFFFFFF</color>
+    <color name="detailButtonBackGround">#F80505</color>
+
+    <color name="imageButtonRowBackgroundColor">#000000</color>
+    <color name="imageButtonRowColor">#ffffff</color>
+
+    <color name="addPhotoBackGround">#ffffff</color>
+    <color name="addPhotoImageColor">#000000</color>
+
+    <color name="apiSearchHintColor">#ffffff</color>
+
+
+</resources>

@@ -2,4 +2,20 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="mainPageTextColor">#FFFFFFFF</color>
+
+    <color name="detailBackgroundColor">#FFFFFFFF</color>
+    <color name="detailHintColor">#FF000000</color>
+    <color name="detailButtonTextColor">#FFFFFFFF</color>
+    <color name="detailButtonBackGround">#512DA8</color>
+
+    <color name="imageButtonRowBackgroundColor">#FFFFFFFF</color>
+    <color name="imageButtonRowColor">#000000</color>
+
+    <color name="addPhotoBackGround">#000000</color>
+    <color name="addPhotoImageColor">#ffffff</color>
+
+    <color name="apiSearchHintColor">#000000</color>
+
 </resources>
