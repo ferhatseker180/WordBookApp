@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="mainPageTextColor">#FFFFFFFF</color>
+    <color name="mainPageTextColor">#000000</color>
 
     <color name="detailBackgroundColor">#FFFFFFFF</color>
     <color name="detailHintColor">#FF000000</color>
